@@ -20,7 +20,7 @@ const FamilySection = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 rounded-3xl transform -rotate-3"></div>
             <img
-              src="/family.jpg"
+              src="/images/family.jpg"
               alt="Família"
               width={2}
               height={2}
@@ -40,60 +40,23 @@ const FamilySection = () => {
             </div>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Venho de uma família simples e trabalhadora. Meus pais, Maria e João, 
-              sempre me ensinaram o valor do trabalho duro e da educação. Mesmo com 
-              recursos limitados, nunca mediram esforços para apoiar meus sonhos.
+              Meu pai, Sergio, músico profissional e designer gráfico, sempre foi meu exemplo de como equilibrar paixão e responsabilidade. Com ele aprendi que a honestidade é a base de tudo, que a lealdade define o caráter, e que os laços verdadeiros são nossa maior força. Sua dedicação ao trabalho e à família me mostrou que é possível seguir seus sonhos sem abandonar quem você ama. Cada conselho seu carrega a sabedoria de quem vive a vida com propósito e integridade.
             </p>
 
             <p className="text-lg text-gray-700 leading-relaxed">
-              Minha irmã mais nova, Ana, sempre foi minha maior incentivadora. 
-              Quando eu duvidava de mim mesmo, ela estava lá para me lembrar 
-              de que eu era capaz de conquistar qualquer coisa.
+              Minha mãe é a força silenciosa que sustenta nossa família. Como cuidadora do lar, ela transformou sacrifício em amor puro, especialmente no cuidado dedicado à minha irmã Lara. O que mais me encanta é sua capacidade de nos manter sempre bem, independente das circunstâncias. Ela me ensinou que a verdadeira força não está nos grandes gestos, mas na constância do amor diário. Sua dedicação incansável é a prova viva de que o amor de mãe não conhece limites.
             </p>
 
-            <div className="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-green-600">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Minha irmã mais nova, Lara, sempre foi minha maior inspiração. Mesmo com as dificuldades da Síndrome de Down, ela me ensina diariamente sobre alegria genuína e amor verdadeiro. Seu sorriso constante é um lembrete de que a felicidade está nas coisas simples, e sua presença em nossas vidas é um presente que nos torna pessoas melhores a cada dia.
+            </p>
+            {/* <div className="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-green-600">
               <p className="text-gray-800 italic text-lg">
                 "Filho, você pode ir para onde quiser no mundo, mas lembre-se 
                 sempre de onde você veio e dos valores que te ensinamos."
               </p>
               <p className="text-green-600 font-semibold mt-2">- Minha mãe, Maria</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Family Values */}
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Users className="w-8 h-8 text-white" />
-            </div>
-            <h4 className="text-xl font-bold text-black mb-4">União</h4>
-            <p className="text-gray-600">
-              Uma família unida que sempre se apoiou nos momentos difíceis 
-              e celebrou juntos cada conquista.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Sparkles className="w-8 h-8 text-white" />
-            </div>
-            <h4 className="text-xl font-bold text-black mb-4">Valores</h4>
-            <p className="text-gray-600">
-              Honestidade, trabalho duro, respeito e humildade foram os 
-              pilares da minha educação.
-            </p>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <MapPin className="w-8 h-8 text-white" />
-            </div>
-            <h4 className="text-xl font-bold text-black mb-4">Origem</h4>
-            <p className="text-gray-600">
-              De uma pequena cidade no interior, mas com sonhos grandes 
-              e determinação infinita.
-            </p>
+            </div> */}
           </div>
         </div>
       </div>

@@ -56,9 +56,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            De uma pequena cidade no Brasil para universidades internacionais. 
-            Esta é a história de como um sonho se tornou realidade e transformou 
-            completamente minha visão de mundo.
+            De Belo Horizonte para o mundo. 
           </p>
 
 

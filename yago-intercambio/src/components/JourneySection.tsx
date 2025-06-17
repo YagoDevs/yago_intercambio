@@ -34,11 +34,19 @@ const JourneySection = () => {
     city: 'Enschede',
     period: 'Agosto - Fevereiro 2026',
     title: 'Saxion University of Applied Sciences',
-    description: 'Minha primeira experiência internacional. Estudei International Business e me apaixonei pela diversidade cultural de Toronto.',
-    image: 'https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: [
+      'Neste semestre consegui realizar um sonho que carrego há muito tempo que é fazer um intercâmbio, cursando algo relacionado a tecnologia. Esta oportunidade representa muito mais que um intercâmbio acadêmico - é a chance de mergulhar no que sempre foi minha paixão e objetivo de carreira.',
+      
+      'Este intercâmbio vai me moldar não apenas como aluno e futuro profissional, mas também como pessoa. Vivenciar uma cultura diferente, entender as nuances interculturais e expandir minha visão de mundo são experiências que levarei para toda a vida. A Holanda é reconhecida mundialmente por sua inovação na área de tecnologia e games, e estar imerso nesse ambiente será fundamental para meu desenvolvimento.',
+      
+      'Felizmente consegui uma bolsa que cobre as mensalidades do curso, o que já representa uma conquista enorme. Entretanto, os custos de moradia, alimentação, passagem, visto e demais despesas de vida no exterior não estão incluídos na bolsa. Por isso, estou buscando apoio para tornar este sonho uma realidade completa.',
+      
+      'Acredito que investir em educação e experiências internacionais é investir no futuro. Tudo que aprender e vivenciar na Holanda será multiplicado quando retornar, contribuindo não apenas para meu crescimento pessoal, mas também para compartilhar conhecimento e oportunidades com outras pessoas.'
+    ],
+    image: 'https://lh3.googleusercontent.com/p/AF1QipPeIECMI89I_IdJ4H096SfJb-YtSnrquNpbv8I3=s1360-w1360-h1020-rw',
     achievements: ['Média 9.2', 'Fluência em inglês', 'Líder estudantil'],
     reverse: false,
-    acceptanceLetter: '/images/carta_aceite.pdf' // Replace with your PDF path
+    acceptanceLetter: '/images/carta_aceite.pdf' 
   };
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
@@ -59,8 +67,7 @@ const JourneySection = () => {
   return (
     <Section id="journey" background="black">
       <SectionHeader
-        title="Minha Trajetória Acadêmica"
-        subtitle="Dois anos transformadores em três países diferentes, cada um me ensinando lições únicas"
+        title="Intercâmbio - Holanda"
         badge="JORNADA INTERNACIONAL"
         className='text-white'
         icon={<Plane className="w-8 h-8 text-green-500" />}

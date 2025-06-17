@@ -5,25 +5,22 @@ import { Heart, CreditCard, Smartphone, Copy, Check, DollarSign } from 'lucide-r
 
 const DonationSection = () => {
   const [copiedPix, setCopiedPix] = useState(false);
-  const pixKey = "meuemail@exemplo.com";
+  const pixKey = "yagophellipe2012@live.com";
 
   // Dados de exemplo - você pode ajustar conforme necessário
-  const currentDonations = 3500; // Doações recebidas em BRL
+  const currentDonations = 0; // Doações recebidas em BRL
 
   const expenses = [
-    { item: "Taxa de Inscrição", amount: 2000 },
-    { item: "Passagem Aérea", amount: 4000 },
-    { item: "Seguro Saúde", amount: 1500 },
-    { item: "Visto", amount: 1000 },
-    { item: "Acomodação", amount: 4000 },
-    { item: "Alimentação", amount: 2500 },
-    { item: "Outros", amount: 1000 },
-    { item: "Moradia", amount: 20000 },
+    { item: "Passagem Aérea", amount: 6500 },
+    { item: "Seguro Saúde", amount: 1800 },
+    { item: "Visto", amount: 1500 },
+    { item: "Acomodação", amount: 19000 },
+    { item: "Alimentação", amount: 10500 },
+    { item: "Reserva de Emergência", amount: 4000 },
   ];
 
   const totalCost = expenses.reduce((acc, expense) => acc + expense.amount, 0);
   const progress = (currentDonations / totalCost) * 100;
-
 
   const copyPixKey = async () => {
     try {
@@ -37,7 +34,7 @@ const DonationSection = () => {
 
   const handlePayPalDonation = () => {
     // Substitua pelo seu link real do PayPal
-    window.open('https://www.paypal.com/donate/?business=SEUEMAIL&currency_code=BRL', '_blank');
+    window.open('https://www.paypal.com/donate/?hosted_button_id=4EKXHZ9U6J5F6', '_blank');
   };
 
   return (
@@ -50,10 +47,6 @@ const DonationSection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
             Apoie Esta Jornada
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Se minha história te inspirou ou te ajudou de alguma forma, considere fazer uma 
-            contribuição para apoiar futuros projetos e experiências que compartilharei aqui.
-          </p>
         </div>
 
         {/* Progresso das Doações */}

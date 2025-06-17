@@ -8,7 +8,7 @@ const StorySection = () => {
   const storyBlocks = [
     {
       title: "Quem Sou Eu",
-      content: "Meu nome é [Seu Nome], tenho 24 anos e sou natural de uma pequena cidade no interior do Brasil. Sempre fui apaixonado por conhecer culturas diferentes e sonhava em estudar no exterior desde muito jovem.",
+      content: "Meu nome é Yago, tenho 23 anos e sou natural de Belo Horizonte, Minas Gerais",
       image: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=800",
       icon: User,
       reverse: false
@@ -40,7 +40,6 @@ const StorySection = () => {
     <Section id="story" background="white">
       <SectionHeader
         title="Minha História"
-        subtitle="Como tudo começou e o caminho até realizar o sonho do intercâmbio"
       />
 
       <div className="space-y-20">

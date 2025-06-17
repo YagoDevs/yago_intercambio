@@ -6,10 +6,10 @@ interface JourneyCardProps {
   city: string;
   period: string;
   title: string;
-  description: string;
+  description: string | string[]; 
   image: string;
   achievements: string[];
-  reverse?: boolean;
+  reverse: boolean;
 }
 
 const JourneyCard: React.FC<JourneyCardProps> = ({
@@ -55,25 +55,19 @@ const JourneyCard: React.FC<JourneyCardProps> = ({
           {title}
         </h3>
         
-        <p className="text-lg text-gray-300 leading-relaxed">
-          {description}
-        </p>
-
-        <div className="space-y-3">
-          <div className="flex items-center space-x-2 text-green-400 text-sm font-medium">
-            <Star className="w-4 h-4" />
-            <span>Principais Conquistas:</span>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            {achievements.map((achievement, index) => (
-              <span 
-                key={index}
-                className="bg-green-600/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium border border-green-600/30"
-              >
-                {achievement}
-              </span>
-            ))}
-          </div>
+        {/* Description - CORRIGIDO AQUI */}
+        <div className="space-y-4">
+          {Array.isArray(description) ? (
+            description.map((paragraph, index) => (
+              <p key={index} className="text-lg text-gray-300 leading-relaxed">
+                {paragraph}
+              </p>
+            ))
+          ) : (
+            <p className="text-lg text-gray-300 leading-relaxed">
+              {description}
+            </p>
+          )}
         </div>
 
         <div className="w-20 h-1 bg-gradient-to-r from-green-600 to-green-700 rounded-full"></div>

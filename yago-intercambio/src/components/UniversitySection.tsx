@@ -8,21 +8,6 @@ const UniversitySection = () => {
       title: 'Magna Cum Laude',
       description: 'Graduação com distinção acadêmica'
     },
-    {
-      icon: Globe,
-      title: 'Programa Internacional',
-      description: 'Intercâmbio em 3 universidades'
-    },
-    {
-      icon: Users,
-      title: 'Líder Estudantil',
-      description: 'Presidente da associação de estudantes internacionais'
-    },
-    {
-      icon: Trophy,
-      title: 'Melhor Projeto',
-      description: 'Prêmio de melhor projeto de pesquisa'
-    }
   ];
 
   const courses = [
@@ -39,10 +24,10 @@ const UniversitySection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Experiência Acadêmica
+            Intercâmbio na Holanda
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Como o intercâmbio transformou minha jornada universitária
+            Neste semestre eu consegui uma oportunidade de fazer um semestre na Saxion University of Applied Science fazendo o curso de Creative Media and games Technologies, onde sempre foi um sonho de conseguir tentar 
           </p>
         </div>
 
@@ -55,11 +40,8 @@ const UniversitySection = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">
-                  University of Toronto
+                  Saxion University Of Applied Science
                 </h3>
-                <p className="text-lg text-blue-600 font-medium">
-                  Bachelor of International Business
-                </p>
               </div>
             </div>
 
