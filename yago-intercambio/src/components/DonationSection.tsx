@@ -1,11 +1,29 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Heart, CreditCard, Smartphone, Copy, Check } from 'lucide-react';
+import { Heart, CreditCard, Smartphone, Copy, Check, DollarSign } from 'lucide-react';
 
 const DonationSection = () => {
   const [copiedPix, setCopiedPix] = useState(false);
   const pixKey = "meuemail@exemplo.com";
+
+  // Dados de exemplo - você pode ajustar conforme necessário
+  const currentDonations = 3500; // Doações recebidas em BRL
+
+  const expenses = [
+    { item: "Taxa de Inscrição", amount: 2000 },
+    { item: "Passagem Aérea", amount: 4000 },
+    { item: "Seguro Saúde", amount: 1500 },
+    { item: "Visto", amount: 1000 },
+    { item: "Acomodação", amount: 4000 },
+    { item: "Alimentação", amount: 2500 },
+    { item: "Outros", amount: 1000 },
+    { item: "Moradia", amount: 20000 },
+  ];
+
+  const totalCost = expenses.reduce((acc, expense) => acc + expense.amount, 0);
+  const progress = (currentDonations / totalCost) * 100;
+
 
   const copyPixKey = async () => {
     try {
@@ -36,6 +54,62 @@ const DonationSection = () => {
             Se minha história te inspirou ou te ajudou de alguma forma, considere fazer uma 
             contribuição para apoiar futuros projetos e experiências que compartilharei aqui.
           </p>
+        </div>
+
+        {/* Progresso das Doações */}
+        <div className="bg-gray-900 p-8 rounded-3xl border border-gray-800 mb-12">
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center">
+              <DollarSign className="w-6 h-6 text-white" />
+            </div>
+          </div>
+          <h3 className="text-xl font-semibold text-white mb-4">
+            Progresso das Doações
+          </h3>
+          <div className="mb-4">
+            <div className="w-full bg-gray-700 rounded-full h-4 mb-2">
+              <div 
+                className="bg-green-600 h-4 rounded-full transition-all duration-500"
+                style={{ width: `${progress}%` }}
+              ></div>
+            </div>
+            <p className="text-gray-400">
+              R$ {currentDonations.toLocaleString()} de R$ {totalCost.toLocaleString()} arrecadados
+            </p>
+          </div>
+        </div>
+
+        {/* Tabela de Gastos */}
+        <div className="bg-gray-900 p-8 rounded-3xl border border-gray-800 mb-12">
+          <h3 className="text-xl font-semibold text-white mb-6">
+            Detalhamento dos Gastos
+          </h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="border-b border-gray-700">
+                  <th className="pb-4 text-gray-400 font-medium">Item</th>
+                  <th className="pb-4 text-gray-400 font-medium text-right">Valor (R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {expenses.map((expense, index) => (
+                  <tr key={index} className="border-b border-gray-700">
+                    <td className="py-4 text-white">{expense.item}</td>
+                    <td className="py-4 text-white text-right">
+                      {expense.amount.toLocaleString()}
+                    </td>
+                  </tr>
+                ))}
+                <tr className="font-semibold">
+                  <td className="py-4 text-white">Total</td>
+                  <td className="py-4 text-white text-right">
+                    {totalCost.toLocaleString()}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -85,41 +159,6 @@ const DonationSection = () => {
               {copiedPix ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
               <span>{copiedPix ? 'Copiado!' : 'Copiar Chave PIX'}</span>
             </button>
-          </div>
-        </div>
-
-        <div className="bg-gray-900 p-8 rounded-3xl border border-gray-800">
-          <h3 className="text-2xl font-bold text-white mb-6">
-            Por que Sua Contribuição Importa?
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6 text-center">
-            <div>
-              <div className="w-12 h-12 bg-green-600/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <span className="text-green-400 text-xl">📚</span>
-              </div>
-              <h4 className="text-white font-semibold mb-2">Educação</h4>
-              <p className="text-gray-400 text-sm">
-                Apoiar novos cursos e certificações
-              </p>
-            </div>
-            <div>
-              <div className="w-12 h-12 bg-green-600/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <span className="text-green-400 text-xl">🌍</span>
-              </div>
-              <h4 className="text-white font-semibold mb-2">Viagens</h4>
-              <p className="text-gray-400 text-sm">
-                Financiar futuras aventuras e experiências
-              </p>
-            </div>
-            <div>
-              <div className="w-12 h-12 bg-green-600/20 rounded-xl flex items-center justify-center mx-auto mb-3">
-                <span className="text-green-400 text-xl">💡</span>
-              </div>
-              <h4 className="text-white font-semibold mb-2">Projetos</h4>
-              <p className="text-gray-400 text-sm">
-                Desenvolver conteúdo e projetos inspiradores
-              </p>
-            </div>
           </div>
         </div>
 
