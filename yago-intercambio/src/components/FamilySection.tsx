@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, Users, MapPin, Sparkles } from 'lucide-react';
+import Image from 'next/image';
 
 const FamilySection = () => {
   return (
@@ -19,8 +20,10 @@ const FamilySection = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 rounded-3xl transform -rotate-3"></div>
             <img
-              src=
+              src="/family.jpg"
               alt="Família"
+              width={2}
+              height={2}
               className="relative w-full h-96 object-cover rounded-3xl shadow-2xl"
             />
           </div>
