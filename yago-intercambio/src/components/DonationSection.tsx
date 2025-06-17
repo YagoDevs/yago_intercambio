@@ -23,16 +23,16 @@ const DonationSection = () => {
   };
 
   return (
-    <section id="donation" className="py-20 bg-black text-white">
+    <section id="donation" className="py-20 bg-white text-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="mb-12">
           <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <Heart className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
             Apoie Esta Jornada
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Se minha história te inspirou ou te ajudou de alguma forma, considere fazer uma 
             contribuição para apoiar futuros projetos e experiências que compartilharei aqui.
           </p>

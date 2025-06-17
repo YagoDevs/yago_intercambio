@@ -6,7 +6,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import JourneySection from "@/components/JourneySection";
 import StorySection from "@/components/StorySection";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,8 +14,8 @@ export default function Home() {
       <Hero />
       <StorySection />
       <FamilySection />
-      <JourneySection />
       <CompaniesSection />
+      <JourneySection />
       <DonationSection />
       <Footer />
     </div>

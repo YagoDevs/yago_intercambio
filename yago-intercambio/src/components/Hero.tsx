@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { MapPin, Calendar, ArrowDown, Plane } from 'lucide-react';
-import Button from './ui/Button';
-import backgroundImage from '../../public/netherlands.jpg';
+import { Button } from '@/components/ui/button';
+import backgroundImage from '../../public/images/netherlands.jpg';
+import yagoImage from '../../public/images/yago-removebg-preview.png';
 
 const Hero = () => {
   const scrollToNext = () => {
@@ -32,6 +33,13 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/70"></div>
       </div>
 
+      {/* Imagem do Yago no canto direito */}
+      <img
+        src={yagoImage.src}
+        alt="Yago Phellipe"
+        className="hidden md:block absolute left-0 bottom-0 h-[620px] object-contain z-0 pointer-events-none select-none drop-shadow-2xl"
+      />
+
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
@@ -57,7 +65,7 @@ const Hero = () => {
           <div className="space-y-4 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
             <Button
               onClick={scrollToNext}
-              variant="primary"
+              variant="default"
               size="lg"
               className="w-full sm:w-auto"
             >

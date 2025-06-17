@@ -27,7 +27,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
           </span>
         </div>
       )}
-      <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
+      <h2 className="text-4xl sm:text-5xl font-bold mb-6">
         {title}
       </h2>
       {subtitle && (
