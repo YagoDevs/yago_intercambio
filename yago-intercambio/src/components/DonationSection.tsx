@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Heart, CreditCard, Smartphone, Copy, Check, DollarSign } from 'lucide-react';
+import { Heart, CreditCard, Smartphone, Copy, Check, DollarSign, Youtube } from 'lucide-react';
 
 const DonationSection = () => {
   const [copiedPix, setCopiedPix] = useState(false);
@@ -37,6 +37,10 @@ const DonationSection = () => {
     window.open('https://www.paypal.com/donate/?hosted_button_id=4EKXHZ9U6J5F6', '_blank');
   };
 
+  const handleYouTubeChannel = () => {
+    window.open('https://www.youtube.com/channel/UCiKv-rYhlGfSpDUOBY7ToCw', '_blank');
+  };
+
   return (
     <section id="donation" className="py-20 bg-white text-black">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -67,7 +71,7 @@ const DonationSection = () => {
               ></div>
             </div>
             <p className="text-gray-400">
-              R$ {currentDonations.toLocaleString()} de R$ {totalCost.toLocaleString()} arrecadados
+              R$ {currentDonations.toLocaleString('pt-BR')} de R$ {totalCost.toLocaleString('pt-BR')} arrecadados
             </p>
           </div>
         </div>
@@ -90,14 +94,14 @@ const DonationSection = () => {
                   <tr key={index} className="border-b border-gray-700">
                     <td className="py-4 text-white">{expense.item}</td>
                     <td className="py-4 text-white text-right">
-                      {expense.amount.toLocaleString()}
+                      R$ {expense.amount.toLocaleString('pt-BR')}
                     </td>
                   </tr>
                 ))}
                 <tr className="font-semibold">
                   <td className="py-4 text-white">Total</td>
                   <td className="py-4 text-white text-right">
-                    {totalCost.toLocaleString()}
+                    R$ {totalCost.toLocaleString('pt-BR')}
                   </td>
                 </tr>
               </tbody>
@@ -121,7 +125,7 @@ const DonationSection = () => {
             </p>
             <button
               onClick={handlePayPalDonation}
-              className="w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="w-full bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer"
             >
               Doar via PayPal
             </button>
@@ -147,12 +151,34 @@ const DonationSection = () => {
             </div>
             <button
               onClick={copyPixKey}
-              className="w-full bg-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+              className="w-full bg-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 cursor-pointer"
             >
               {copiedPix ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
               <span>{copiedPix ? 'Copiado!' : 'Copiar Chave PIX'}</span>
             </button>
           </div>
+        </div>
+
+        {/* YouTube Channel */}
+        <div className="bg-gray-900 p-8 rounded-3xl border border-gray-800 hover:border-red-600/50 transition-all duration-300 mb-8">
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center">
+              <Youtube className="w-6 h-6 text-white" />
+            </div>
+          </div>
+          <h3 className="text-xl font-semibold text-white mb-4">
+            Acompanhe minha jornada durante o intercâmbio
+          </h3>
+          <p className="text-gray-400 mb-6 leading-relaxed">
+            Inscreva-se no meu canal do YouTube e acompanhe todos os momentos da minha experiência na Holanda!
+          </p>
+          <button
+            onClick={handleYouTubeChannel}
+            className="w-full bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-200 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2 cursor-pointer"
+          >
+            <Youtube className="w-5 h-5" />
+            <span>Visitar Canal no YouTube</span>
+          </button>
         </div>
 
         <div className="mt-8">

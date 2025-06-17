@@ -15,12 +15,12 @@ const CompaniesSection = () => {
   const companies = [
     { name: 'BTG Pactual', logo: '/images/btgpactual.jpg', experience: '2 Estágios de Férias' },
     { name: 'Cefet-MG', logo: '/images/cefet-mg.png', experience: 'Ensino Médio e Técnico' },
-    { name: 'Epsa', logo: '/images/epsa.png', experience: 'Ensino Médio' },
+    { name: 'EPSA', logo: '/images/epsa.png', experience: 'Ensino Médio' },
     { name: 'Inteli', logo: '/images/inteli.jpg', experience: 'Faculdade' },
     { name: 'QI Tech', logo: '/images/qitech_logo.jpeg', experience: 'Estágio Regular no time de passivos' },
     { name: 'Vivo', logo: '/images/vivo.png', experience: 'Estágio Regular' },
     { name: 'Exercito Brasileiro', logo: '/images/exercito_brasileiro.jpg', experience: 'Soldado - Escalador Militar' },
-    { name: 'Inteli Blockchain', logo: '/images/inteli_blockchain.jpg', experience: 'Presidente da liga' },
+    { name: 'Inteli Blockchain', logo: '/images/inteli_blockchain.jpg', experience: 'Ex Presidente da liga' },
   ];
 
   return (
@@ -28,10 +28,10 @@ const CompaniesSection = () => {
       <div className="w-full mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
-            Experiências Profissionais
+            Capítulos da minha trajetória
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Empresas e organizações onde tive oportunidades de aprender e crescer
+            Empresas, escolas e organizações onde tive oportunidades de aprender e crescer
           </p>
         </div>
 
@@ -53,9 +53,16 @@ const CompaniesSection = () => {
               {companies.map((company, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 py-8">
-                    <div className="p-10 transition-all duration-300">
-                      <p className="text-center mb-6 text-xl font-semibold text-gray-800">{company.name}</p>
-                      <div className="relative w-[300px] h-[150px] mx-auto">
+                    <div className="p-10 transition-all duration-300 relative">
+                      {/* Nome da empresa - Destaque principal */}
+                      <div className="text-center mb-4">
+                        <h3 className="text-2xl font-bold text-gray-900 tracking-tight leading-tight">
+                          {company.name}
+                        </h3>
+                      </div>
+                      
+                      {/* Logo */}
+                      <div className="relative w-[300px] h-[150px] mx-auto mb-6">
                         <Image
                           src={company.logo}
                           alt={company.name}
@@ -63,7 +70,14 @@ const CompaniesSection = () => {
                           className="object-contain transition-all duration-300"
                         />
                       </div>
-                      <p className="text-center mt-6 text-lg font-medium text-gray-600">{company.experience}</p>
+                      
+                      {/* Experiência - Design mais sutil e afastado */}
+                      <div className="text-center mt-8 relative">
+                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-12 h-0.5 bg-gray-300"></div>
+                        <p className="text-sm font-normal text-gray-500 italic leading-relaxed px-4 pt-4">
+                          {company.experience}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </CarouselItem>

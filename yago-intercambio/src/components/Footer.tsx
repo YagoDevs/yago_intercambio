@@ -37,13 +37,13 @@ const Footer = () => {
             <div className="space-y-2">
               <button
                 onClick={() => document.getElementById('story')?.scrollIntoView({ behavior: 'smooth' })}
-                className="block text-gray-400 hover:text-green-400 transition-colors"
+                className="block text-gray-400 hover:text-green-400 transition-colors cursor-pointer"
               >
-                Minha História
+                Um pouco da Minha História
               </button>
               <button
                 onClick={() => document.getElementById('journey')?.scrollIntoView({ behavior: 'smooth' })}
-                className="block text-gray-400 hover:text-green-400 transition-colors"
+                className="block text-gray-400 hover:text-green-400 transition-colors cursor-pointer"
               >
                 Jornada
               </button>
@@ -55,13 +55,13 @@ const Footer = () => {
               </button>
               <button
                 onClick={() => document.getElementById('companies')?.scrollIntoView({ behavior: 'smooth' })}
-                className="block text-gray-400 hover:text-green-400 transition-colors"
+                className="block text-gray-400 hover:text-green-400 transition-colors cursor-pointer"
               >
                 Experiências
               </button>
               <button
                 onClick={() => document.getElementById('donation')?.scrollIntoView({ behavior: 'smooth' })}
-                className="block text-gray-400 hover:text-green-400 transition-colors"
+                className="block text-gray-400 hover:text-green-400 transition-colors cursor-pointer"
               >
                 Apoiar
               </button>

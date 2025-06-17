@@ -117,7 +117,7 @@ const JourneySection = () => {
                         <button
                           onClick={() => changePage(-1)}
                           disabled={pageNumber <= 1}
-                          className="p-2 rounded-lg bg-white text-gray-400 border border-gray-400 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:border-green-500 hover:text-green-500 disabled:hover:border-gray-200 disabled:hover:text-gray-400"
+                          className="p-2 rounded-lg bg-white text-gray-400 border border-gray-400 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:border-green-500 hover:text-green-500 disabled:hover:border-gray-200 disabled:hover:text-gray-400 cursor-pointer"
                           title="Página anterior"
                         >
                           <ChevronLeft className="w-5 h-5" />
@@ -130,7 +130,7 @@ const JourneySection = () => {
                         <button
                           onClick={() => changePage(1)}
                           disabled={pageNumber >= (numPages || 1)}
-                          className="p-2 rounded-lg bg-white text-gray-400 border border-gray-400 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:border-green-500 hover:text-green-500 disabled:hover:border-gray-200 disabled:hover:text-gray-400"
+                          className="p-2 rounded-lg bg-white text-gray-400 border border-gray-400 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 hover:border-green-500 hover:text-green-500 disabled:hover:border-gray-200 disabled:hover:text-gray-400 cursor-pointer"
                           title="Próxima página"
                         >
                           <ChevronRight className="w-5 h-5" />

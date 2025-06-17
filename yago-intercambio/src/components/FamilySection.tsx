@@ -10,9 +10,6 @@ const FamilySection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-black mb-6">
             Minhas Raízes
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A família que me deu asas para voar e o porto seguro para onde sempre posso voltar
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">

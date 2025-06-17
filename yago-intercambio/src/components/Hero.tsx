@@ -65,7 +65,7 @@ const Hero = () => {
               onClick={scrollToNext}
               variant="default"
               size="lg"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto cursor-pointer"
             >
               Conhecer Minha História
             </Button>
@@ -73,7 +73,7 @@ const Hero = () => {
               onClick={scrollToDonation}
               variant="secondary"
               size="lg"
-              className="w-full sm:w-auto"
+              className="w-full sm:w-auto cursor-pointer"
             >
               Apoiar Intercâmbio
             </Button>
@@ -84,7 +84,7 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <button
         onClick={scrollToNext}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-green-400 hover:text-green-300 transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-green-400 hover:text-green-300 transition-colors animate-bounce cursor-pointer"
       >
         <ArrowDown className="w-8 h-8" />
       </button>

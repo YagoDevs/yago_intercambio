@@ -49,7 +49,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('story')}
-              className={`transition-colors hover:text-green-600 ${
+              className={`transition-colors hover:text-green-600 cursor-pointer ${
                 isScrolled ? 'text-gray-700' : 'text-white/90'
               }`}
             >
@@ -57,7 +57,7 @@ const Header = () => {
             </button>
             <button
               onClick={() => scrollToSection('journey')}
-              className={`transition-colors hover:text-green-600 ${
+              className={`transition-colors hover:text-green-600 cursor-pointer ${
                 isScrolled ? 'text-gray-700' : 'text-white/90'
               }`}
             >
@@ -65,7 +65,7 @@ const Header = () => {
             </button>
             <button
               onClick={() => scrollToSection('family')}
-              className={`transition-colors hover:text-green-600 ${
+              className={`transition-colors hover:text-green-600 cursor-pointer ${
                 isScrolled ? 'text-gray-700' : 'text-white/90'
               }`}
             >
@@ -73,7 +73,7 @@ const Header = () => {
             </button>
             <button
               onClick={() => scrollToSection('companies')}
-              className={`transition-colors hover:text-green-600 ${
+              className={`transition-colors hover:text-green-600 cursor-pointer ${
                 isScrolled ? 'text-gray-700' : 'text-white/90'
               }`}
             >
@@ -81,7 +81,7 @@ const Header = () => {
             </button>
             <button
               onClick={() => scrollToSection('donation')}
-              className="bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-full hover:from-green-700 hover:to-green-800 transition-all duration-200 flex items-center space-x-2 shadow-lg hover:shadow-xl"
+              className="bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-full hover:from-green-700 hover:to-green-800 transition-all duration-200 flex items-center space-x-2 shadow-lg hover:shadow-xl cursor-pointer"
             >
               <Heart className="w-4 h-4" />
               <span>Apoiar</span>
@@ -91,7 +91,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
+            className={`md:hidden p-2 rounded-lg transition-colors cursor-pointer ${
               isScrolled ? 'text-gray-700' : 'text-white'
             }`}
           >
@@ -105,31 +105,31 @@ const Header = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
                 onClick={() => scrollToSection('story')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors cursor-pointer"
               >
                 Minha História
               </button>
               <button
                 onClick={() => scrollToSection('journey')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors cursor-pointer"
               >
                 Jornada
               </button>
               <button
                 onClick={() => scrollToSection('family')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors cursor-pointer"
               >
                 Família
               </button>
               <button
                 onClick={() => scrollToSection('companies')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors cursor-pointer"
               >
                 Experiências
               </button>
               <button
                 onClick={() => scrollToSection('donation')}
-                className="flex items-center space-x-2 w-full px-3 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 transition-all duration-200 mt-2"
+                className="flex items-center space-x-2 w-full px-3 py-2 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:from-green-700 hover:to-green-800 transition-all duration-200 mt-2 cursor-pointer"
               >
                 <Heart className="w-4 h-4" />
                 <span>Apoiar</span>
