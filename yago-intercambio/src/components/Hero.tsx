@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { MapPin, Calendar, ArrowDown, Plane } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import Button from '@/components/ui/button';
 import backgroundImage from '../../public/images/netherlands.jpg';
 import yagoImage from '../../public/images/yago-removebg-preview.png';
 
@@ -63,7 +63,7 @@ const Hero = () => {
           <div className="space-y-4 sm:space-y-0 sm:space-x-6 sm:flex sm:justify-center">
             <Button
               onClick={scrollToNext}
-              variant="default"
+              variant="primary"
               size="lg"
               className="w-full sm:w-auto cursor-pointer"
             >

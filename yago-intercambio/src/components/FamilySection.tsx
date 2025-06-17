@@ -17,7 +17,7 @@ const FamilySection = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 rounded-3xl transform -rotate-3"></div>
             <img
-              src="/images/family.jpg"
+              src="/images/family.JPG"
               alt="Família"
               width={2}
               height={2}
@@ -36,17 +36,19 @@ const FamilySection = () => {
               </h3>
             </div>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Meu pai, Sergio, músico profissional e designer gráfico, sempre foi meu exemplo de como equilibrar paixão e responsabilidade. Com ele aprendi que a honestidade é a base de tudo, que a lealdade define o caráter, e que os laços verdadeiros são nossa maior força. Sua dedicação ao trabalho e à família me mostrou que é possível seguir seus sonhos sem abandonar quem você ama. Cada conselho seu carrega a sabedoria de quem vive a vida com propósito e integridade.
-            </p>
+            <div className="space-y-4">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
+                Meu pai, Sergio, músico profissional e designer gráfico, sempre foi meu exemplo de como equilibrar paixão e responsabilidade. Com ele aprendi que a honestidade é a base de tudo, que a lealdade define o caráter, e que os laços verdadeiros são nossa maior força. Sua dedicação ao trabalho e à família me mostrou que é possível seguir seus sonhos sem abandonar quem você ama. Cada conselho seu carrega a sabedoria de quem vive a vida com propósito e integridade.
+              </p>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Minha mãe é a força silenciosa que sustenta nossa família. Como cuidadora do lar, ela transformou sacrifício em amor puro, especialmente no cuidado dedicado à minha irmã Lara. O que mais me encanta é sua capacidade de nos manter sempre bem, independente das circunstâncias. Ela me ensinou que a verdadeira força não está nos grandes gestos, mas na constância do amor diário. Sua dedicação incansável é a prova viva de que o amor de mãe não conhece limites.
-            </p>
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
+                Minha mãe é a força silenciosa que sustenta nossa família. Como cuidadora do lar, ela transformou sacrifício em amor puro, especialmente no cuidado dedicado à minha irmã Lara. O que mais me encanta é sua capacidade de nos manter sempre bem, independente das circunstâncias. Ela me ensinou que a verdadeira força não está nos grandes gestos, mas na constância do amor diário. Sua dedicação incansável é a prova viva de que o amor de mãe não conhece limites.
+              </p>
 
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Minha irmã mais nova, Lara, sempre foi minha maior inspiração. Mesmo com as dificuldades da Síndrome de Down, ela me ensina diariamente sobre alegria genuína e amor verdadeiro. Seu sorriso constante é um lembrete de que a felicidade está nas coisas simples, e sua presença em nossas vidas é um presente que nos torna pessoas melhores a cada dia.
-            </p>
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
+                Minha irmã mais nova, Lara, sempre foi minha maior inspiração. Mesmo com as dificuldades da Síndrome de Down, ela me ensina diariamente sobre alegria genuína e amor verdadeiro. Seu sorriso constante é um lembrete de que a felicidade está nas coisas simples, e sua presença em nossas vidas é um presente que nos torna pessoas melhores a cada dia.
+              </p>
+            </div>
             {/* <div className="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-green-600">
               <p className="text-gray-800 italic text-lg">
                 "Filho, você pode ir para onde quiser no mundo, mas lembre-se 

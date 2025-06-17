@@ -14,7 +14,7 @@ interface StoryBlockProps {
   content: string;
   image?: string;
   images?: string[];
-  icon: LucideIcon;
+  icon: typeof LucideIcon;
   reverse?: boolean;
   imageSize?: 'small' | 'normal' | 'large';
   hasCarousel?: boolean;
@@ -38,13 +38,22 @@ const StoryBlock: React.FC<StoryBlockProps> = ({
 }) => {
   // Define as classes de tamanho baseado na prop imageSize
   const getImageClasses = () => {
+    if (title === "Quem Sou Eu") {
+      return 'aspect-[4/5]';
+    }
+    if (title === "Trilha Acadêmica") {
+      return 'aspect-[16/9]';
+    }
+    if (hasCarousel) {
+      return 'aspect-[4/3]';
+    }
     switch (imageSize) {
       case 'small':
-        return 'h-60 lg:h-72';
+        return 'aspect-[4/3]';
       case 'large':
-        return 'h-96 lg:h-[28rem]';
+        return 'aspect-[16/9]';
       default:
-        return 'h-80 lg:h-96';
+        return 'aspect-[3/2]';
     }
   };
 
@@ -73,18 +82,22 @@ const StoryBlock: React.FC<StoryBlockProps> = ({
               <CarouselContent>
                 {images.map((img, index) => (
                   <CarouselItem key={index}>
-                    <div className="relative w-full h-full">
+                    <div className="relative w-full h-full flex items-center justify-center">
                       <img
                         src={img}
                         alt={`${title} - ${index + 1}`}
-                        className="w-full h-full object-contain bg-white"
+                        className="w-full h-full object-contain object-center bg-white"
                       />
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="left-2 bg-white/80 hover:bg-white" />
-              <CarouselNext className="right-2 bg-white/80 hover:bg-white" />
+              <CarouselPrevious className="left-2 bg-white/80 hover:bg-white">
+                <span className="sr-only">Previous slide</span>
+              </CarouselPrevious>
+              <CarouselNext className="right-2 bg-white/80 hover:bg-white">
+                <span className="sr-only">Next slide</span>
+              </CarouselNext>
             </Carousel>
           </div>
         </div>
@@ -95,11 +108,13 @@ const StoryBlock: React.FC<StoryBlockProps> = ({
       return (
         <div className="relative group">
           <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
-          <img
-            src={imageToShow}
-            alt={title}
-            className={`relative w-full ${imageClasses} object-contain bg-white rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-300`}
-          />
+          <div className={`relative ${imageClasses} rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-300`}>
+            <img
+              src={imageToShow}
+              alt={title}
+              className={`w-full h-full ${(title === "Quem Sou Eu" || title === "Trilha Acadêmica" || hasCarousel) ? "object-cover object-center" : "object-contain"} bg-white`}
+            />
+          </div>
         </div>
       );
     }
@@ -125,10 +140,12 @@ const StoryBlock: React.FC<StoryBlockProps> = ({
           </h3>
         </div>
         
-        <div className="text-lg text-gray-700 leading-relaxed">
-          <p className="whitespace-pre-line">
-            {content}
-          </p>
+        <div className="text-lg text-gray-700 leading-relaxed space-y-4">
+          {content.split('\n\n').map((paragraph, index) => (
+            <p key={index} className="text-justify">
+              {paragraph}
+            </p>
+          ))}
         </div>
 
         {linkData && (
