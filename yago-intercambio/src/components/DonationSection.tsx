@@ -81,8 +81,8 @@ const DonationSection = () => {
           <h3 className="text-xl font-semibold text-white mb-6">
             Detalhamento dos Gastos
           </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left">
+          <div className="overflow-x-auto -mx-4 px-4">
+            <table className="w-full min-w-[300px] text-left">
               <thead>
                 <tr className="border-b border-gray-700">
                   <th className="pb-4 text-gray-400 font-medium">Item</th>

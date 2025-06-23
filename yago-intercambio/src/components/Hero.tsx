@@ -33,7 +33,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/70"></div>
       </div>
 
-      {/* Imagem do Yago no canto direito */}
+      {/* Imagem do Yago - Desktop no canto esquerdo */}
       <img
         src={yagoImage.src}
         alt="Yago Phellipe"
@@ -43,6 +43,15 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
+          {/* Imagem do Yago - Mobile acima do texto */}
+          <div className="md:hidden mb-8">
+            <img
+              src={yagoImage.src}
+              alt="Yago Phellipe"
+              className="h-[300px] mx-auto object-contain drop-shadow-2xl"
+            />
+          </div>
+          
           <div className="flex items-center justify-center space-x-2 mb-6">
             <Plane className="w-8 h-8 text-green-500" />
             <span className="text-green-500 font-semibold text-lg tracking-wide">INTERCÂMBIO NA HOLANDA</span>

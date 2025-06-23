@@ -7,9 +7,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Mail, href: 'mailto:seuemail@exemplo.com', label: 'Email' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/seuusuario', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com/seuusuario', label: 'Instagram' },
+    { icon: Mail, href: 'mailto:yagophellipe2012@live.com', label: 'Email' },
+    { icon: Linkedin, href: 'https://br.linkedin.com/in/yago-phellipe', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://instagram.com/yago_lopesm', label: 'Instagram' },
     { icon: Globe, href: '#', label: 'Website' },
   ];
 

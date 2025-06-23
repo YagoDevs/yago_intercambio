@@ -102,7 +102,7 @@ const JourneySection = () => {
                         className="shadow-lg"
                         renderTextLayer={false}
                         renderAnnotationLayer={false}
-                        width={windowWidth ? Math.min(0.8 * windowWidth, 700) : 700}
+                        width={windowWidth ? Math.min(windowWidth * 0.7, 600) : 300}
                       />
                     </Document>
                     

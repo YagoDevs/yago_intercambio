@@ -64,7 +64,7 @@ const UniversitySection = () => {
                 <BookOpen className="w-5 h-5 text-blue-600 mr-2" />
                 Principais Disciplinas
               </h4>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {courses.map((course, index) => (
                   <div 
                     key={index}

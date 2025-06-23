@@ -60,7 +60,7 @@ const CompaniesSection = () => {
                       </div>
                       
                       {/* Logo */}
-                      <div className="relative w-[300px] h-[150px] mx-auto mb-6">
+                      <div className="relative w-full max-w-[300px] h-[150px] mx-auto mb-6">
                         <Image
                           src={company.logo}
                           alt={company.name}
