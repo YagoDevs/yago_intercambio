@@ -44,6 +44,9 @@ const StoryBlock: React.FC<StoryBlockProps> = ({
     if (title === "Trilha Acadêmica") {
       return 'aspect-[16/9]';
     }
+    if (title === "Vida Universitária") {
+      return 'aspect-[9/10]';
+    }
     if (hasCarousel) {
       return 'aspect-[4/3]';
     }
@@ -86,7 +89,9 @@ const StoryBlock: React.FC<StoryBlockProps> = ({
                       <img
                         src={img}
                         alt={`${title} - ${index + 1}`}
-                        className="w-full h-full object-contain object-center bg-white"
+                        className={`w-full h-full ${
+                          img.includes('epsa') ? 'object-contain bg-white' : 'object-cover'
+                        } object-center`}
                       />
                     </div>
                   </CarouselItem>
@@ -112,7 +117,7 @@ const StoryBlock: React.FC<StoryBlockProps> = ({
             <img
               src={imageToShow}
               alt={title}
-              className={`w-full h-full ${(title === "Quem Sou Eu" || title === "Trilha Acadêmica" || hasCarousel) ? "object-cover object-center" : "object-contain"} bg-white`}
+              className="w-full h-full object-cover object-center"
             />
           </div>
         </div>

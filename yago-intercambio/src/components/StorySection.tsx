@@ -21,7 +21,8 @@ const StorySection = () => {
       title: "Trilha Acadêmica",
       content: "Minha jornada começou nas salas de aula da escola pública, onde aprendi que sonhos grandes exigem preparação ainda maior. Aos 14 anos, tive uma epifania: se eu queria chegar longe, precisava ir além do básico. Foi então que tomei uma decisão que mudaria tudo. Mergulhei de cabeça nos estudos e conquistei duas aprovações importantes: CEFET-MG para Eletroeletrônica e EPSA Santo Agostinho. Foi na EPSA onde consegui me moldar durante o ensino médio e perceber que eu conseguia atingir meus objetivos, com excelentes professores que me guiaram e me mostraram que com dedicação e foco, qualquer sonho era possível. Foram anos intensos, equilibrando teoria e prática, moldando não apenas meu conhecimento técnico, mas principalmente meu caráter e minha determinação para sempre buscar mais.",
       images: [
-        "images/inteli.jpg"
+        "images/cefet-mg.png",
+        "images/epsa.png",
       ],
       icon: Target,
       reverse: true,
@@ -35,9 +36,8 @@ Um dos projetos que mais me orgulho foi desenvolvido em parceria com o Fofito-US
 
 Esta experiência me mostrou que a verdadeira inovação acontece quando unimos conhecimento técnico com propósito social, sempre buscando criar tecnologias que façam diferença na vida das pessoas.`,
       images: [
-        "images/Inteli_foto.jpg",
         "images/Inteli_foto2.jpg", 
-        "images/inteli.jpg"
+        "images/yago_inteli.JPG",
       ],
       icon: GraduationCap,
       reverse: false,
