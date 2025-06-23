@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { User, Home, Target, Star, GraduationCap, Briefcase } from 'lucide-react';
+import { User, Target, GraduationCap, Briefcase } from 'lucide-react';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
 import StoryBlock from './ui/StoryBlock';

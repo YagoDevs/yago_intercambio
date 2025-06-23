@@ -75,10 +75,10 @@ const AboutSection = () => {
               Uma Experiência Transformadora
             </h3>
             <p className="text-blue-100 text-lg leading-relaxed">
-              "Viajar é a única coisa que você compra que te torna mais rico. 
+              &ldquo;Viajar é a única coisa que você compra que te torna mais rico. 
               E eu posso dizer com certeza que voltei para casa com uma riqueza 
               de experiências, conhecimentos e perspectivas que vão me acompanhar 
-              para sempre."
+              para sempre.&rdquo;
             </p>
           </div>
         </div>

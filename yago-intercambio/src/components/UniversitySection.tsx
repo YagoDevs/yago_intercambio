@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Award, BookOpen, Users, Globe, Trophy } from 'lucide-react';
+import { GraduationCap, Award, BookOpen } from 'lucide-react';
 
 const UniversitySection = () => {
   const achievements = [

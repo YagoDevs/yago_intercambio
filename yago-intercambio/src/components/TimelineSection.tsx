@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Calendar, Camera, Star } from 'lucide-react';
+import { MapPin, Calendar, Star } from 'lucide-react';
 
 const TimelineSection = () => {
   const timelineItems = [

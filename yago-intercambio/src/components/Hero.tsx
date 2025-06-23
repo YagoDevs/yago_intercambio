@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { MapPin, Calendar, ArrowDown, Plane } from 'lucide-react';
+import { ArrowDown, Plane } from 'lucide-react';
 import Button from '@/components/ui/button';
 import backgroundImage from '../../public/images/netherlands.jpg';
 import yagoImage from '../../public/images/yago-removebg-preview.png';

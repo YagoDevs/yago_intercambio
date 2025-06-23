@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { Plane, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from 'lucide-react';
+import { Plane, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import Section from './ui/Section';
 import SectionHeader from './ui/SectionHeader';
@@ -13,7 +13,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
 const JourneySection = () => {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [pageNumber, setPageNumber] = useState(1);
-  const [scale, setScale] = useState(1.0);
   const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -60,10 +59,6 @@ const JourneySection = () => {
     });
   };
 
-  const changeScale = (delta: number) => {
-    setScale(prevScale => Math.min(Math.max(0.5, prevScale + delta), 2.0));
-  };
-
   return (
     <Section id="journey" background="black">
       <SectionHeader
@@ -103,7 +98,7 @@ const JourneySection = () => {
                     >
                       <Page
                         pageNumber={pageNumber}
-                        scale={scale}
+                        scale={1.0}
                         className="shadow-lg"
                         renderTextLayer={false}
                         renderAnnotationLayer={false}

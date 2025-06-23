@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Calendar, Star } from 'lucide-react';
+import { MapPin, Calendar } from 'lucide-react';
 
 interface JourneyCardProps {
   country: string;
@@ -19,7 +19,6 @@ const JourneyCard: React.FC<JourneyCardProps> = ({
   title,
   description,
   image,
-  achievements,
   reverse = false
 }) => {
   return (

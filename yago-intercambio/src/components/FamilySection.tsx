@@ -1,6 +1,5 @@
 import React from 'react';
-import { Heart, Users, MapPin, Sparkles } from 'lucide-react';
-import Image from 'next/image';
+import { Heart } from 'lucide-react';
 
 const FamilySection = () => {
   return (
