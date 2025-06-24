@@ -8,7 +8,7 @@ const DonationSection = () => {
   const pixKey = "yagophellipe2012@live.com";
 
   // Dados de exemplo - você pode ajustar conforme necessário
-  const currentDonations = 350; // Doações recebidas em BRL
+  const currentDonations = 955.08; // Doações recebidas em BRL
 
   const expenses = [
     { item: "Passagem Aérea", amount: 6500 },
@@ -71,8 +71,9 @@ const DonationSection = () => {
               ></div>
             </div>
             <p className="text-gray-400">
-              R$ {currentDonations.toLocaleString('pt-BR')} de R$ {totalCost.toLocaleString('pt-BR')} arrecadados
+              R$ {currentDonations.toLocaleString('pt-BR')} de R$ {totalCost.toLocaleString('pt-BR')} arrecadados ({progress.toFixed(1)}%)
             </p>
+
           </div>
         </div>
 
