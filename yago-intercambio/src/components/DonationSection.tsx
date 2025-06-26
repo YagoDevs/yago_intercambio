@@ -7,8 +7,8 @@ const DonationSection = () => {
   const [copiedPix, setCopiedPix] = useState(false);
   const pixKey = "yagophellipe2012@live.com";
 
-  // Dados de exemplo - você pode ajustar conforme necessário
-  const currentDonations = 955.08; // Doações recebidas em BRL
+  // Dados de exemplo - você pode ajustar conforme nec  essário
+  const currentDonations = 1035.08; // Doações recebidas em BRL
 
   const expenses = [
     { item: "Passagem Aérea", amount: 6500 },
