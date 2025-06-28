@@ -8,7 +8,7 @@ const DonationSection = () => {
   const pixKey = "yagophellipe2012@live.com";
 
   // Dados de exemplo - você pode ajustar conforme nec  essário
-  const currentDonations = 1035.08; // Doações recebidas em BRL
+  const currentDonations = 2045.08; // Doações recebidas em BRL
 
   const expenses = [
     { item: "Passagem Aérea", amount: 6500 },
