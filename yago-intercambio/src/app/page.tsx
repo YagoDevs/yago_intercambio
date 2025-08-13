@@ -13,6 +13,7 @@ export default function Home() {
       <Header />
       <Hero />
       <StorySection />
+      <StorySection />
       <FamilySection />
       <CompaniesSection />
       <JourneySection />
